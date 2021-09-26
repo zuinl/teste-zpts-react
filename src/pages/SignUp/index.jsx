@@ -63,6 +63,7 @@ const Login = () => {
                         <S.InputBox>
                             <label>Full Name</label>
                             <input value={name.name}
+                                data-testid="signup-input-name"
                                 onChange={e => setName({ ...name, name: e.target.value })} />
                             {!name.valid &&
                                 <small>*Este campo não pode ser vazio</small>
@@ -71,6 +72,7 @@ const Login = () => {
                         <S.InputBox>
                             <label>Email</label>
                             <input type="email"
+                                data-testid="signup-input-email"
                                 value={email.email}
                                 onChange={e => setEmail({ ...email, email: e.target.value })} />
                             {!email.valid &&
@@ -80,6 +82,7 @@ const Login = () => {
                         <S.InputBox>
                             <label>Create Password</label>
                             <input type="password"
+                                data-testid="signup-input-password"
                                 value={password.password}
                                 onChange={e => setPassword({ ...password, password: e.target.value })} />
                             {!password.valid &&

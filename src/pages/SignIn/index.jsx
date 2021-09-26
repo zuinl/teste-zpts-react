@@ -52,6 +52,7 @@ const Login = () => {
                         <S.InputBox>
                             <label>Email</label>
                             <input type="email"
+                                data-testid="signin-input-email"
                                 value={email.email}
                                 onChange={e => setEmail({ ...email, email: e.target.value })} />
                             {!email.valid &&
@@ -61,6 +62,7 @@ const Login = () => {
                         <S.InputBox>
                             <label>Password</label>
                             <input type="password"
+                                data-testid="signin-input-password"
                                 value={password.password}
                                 onChange={e => setPassword({ ...password, password: e.target.value })} />
                             {!password.valid &&
@@ -82,7 +84,7 @@ const Login = () => {
 
                         <S.SocialActionButton>
                             <FcGoogle size="22" />
-                            Sign in with Google
+                            Sign In with Google
                         </S.SocialActionButton>
                     </S.SocialActionsBox>
 
